@@ -5,29 +5,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=0.5">
 		<link rel="stylesheet" href="styles.css">
 		<script type="module" src="script.js"></script>
-		<link rel="shortcut icon" type="image/jpg" href="pug.png"/>
+		<link rel="shortcut icon" type="image/jpg" href="pug.png" />
 		<title>Login!</title>
 	</head>
 
 	<body>
 		<nav>
-			<a href='index'>Home</a>
-			<a href='signup'>Signup</a>
+		<a href='index'>Home</a>	
+			
+					<!-- USERS WHO ARE NOT LOGGED WILL SEE THIS -->
+	{{#private}}
+	<a href='accountpage'>
+			<img src='{{avatar}}'>
+	</a>
+		<a onclick='logout()'>Logout</a>
+	{{/private}}
+	
+	<!-- USERS WHO ARE LOGGED WILL SEE THIS -->
+	{{^private}}
+	   	<a href='loginpage'>Login</a>
+		<a href='signup'>Signup</a>	
+	{{/private}}
+		
 		</nav>
 		<main>
 			<div>
 				<h2>Login</h2>
-				<form action='/~/Doggo/login' method='POST' enctype='multipart/form-data'>
+				<form action='/~/logindemo/login' method='POST' enctype='multipart/form-data'>
 					<input type='email' name='username' placeholder='Email' required>
 					<input type='password' name='password' placeholder='Password' required>
-				
+
 					<input type='submit' value='Log In'>
-					<input type='hidden' name='redirecturl' value='/~/Doggo/account'>
-				</form>	
+					<input type='hidden' name='redirecturl' value='/~/logindemo/accountpage'>
+				</form>
 			</div>
 		</main>
 		<footer>
-			© 2023 The Doggo Inc
+			© 2023 Kabelo
 		</footer>
 	</body>
 

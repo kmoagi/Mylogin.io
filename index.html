@@ -4,61 +4,62 @@
 		<meta name="viewport" content="width=device-width, initial-scale=0.5">
 		<link rel="stylesheet" href="styles.css">
 		<script type="module" src="script.js"></script>
+        
+        	
+		<link rel="shortcut icon" type="image/jpg" href="pug.png"/>
+		<title>Sign Up!</title>
+
+
+
+
 	</head>
 	<body>
 		
-	<!DOCTYPE html>
+	
 <html>
 
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=0.5">
-		<link rel="stylesheet" href="styles.css">
-		<script type="module" src="script.js"></script>
-		<link rel="shortcut icon" type="image/jpg" href="pug.png"/>
-		<title>Sign Up!</title>
-	</head>
+	
+	
+	
 
-	<body>
+
 		
 		<nav>
 			
 			<!-- USERS WHO ARE NOT LOGGED WILL SEE THIS -->
-	{{^private}}
-		<a href='loginpage'>Login</a>
-		<a href='signup'>Signup</a>
+	{{#private}}
+	<a href='accountpage'>
+			<img src='{{avatar}}'>
+	</a>
+		<a onclick='logout()'>Logout</a>
 	{{/private}}
 	
 	<!-- USERS WHO ARE LOGGED WILL SEE THIS -->
-	{{#private}}
-		<a href='account'>
-			<img src='{{avatar}}'>
-		</a>
-		<a onclick='logout()'>Logout</a>
+	{{^private}}
+	   	<a href='loginpage'>Login</a>
+		<a href='signup'>Signup</a>	
 	{{/private}}
 
 		</nav>
-		
-		
-		
+	
 		<main>
 			<div>
 				
-			<!-- THE WHITE BOX IN OUR DESIGN -->
-
+	   <!-- THE WHITE BOX IN OUR DESIGN -->
 		<!-- THE BIG TEXT IN OUR DESIGN -->
 		<h1>
-			Doggo 
+			My Login 
 		</h1>
 		<!-- THE SMALLER TEXT IN OUR DESIGN -->
 		<h2>
-			An AI powered robot 
+			App
 		</h2>
 		
 				
 			</div>
 		</main>
 		<footer>
-			© 2023 The Doggo Inc
+			© 2023 Kabelo
 		</footer>
 
 

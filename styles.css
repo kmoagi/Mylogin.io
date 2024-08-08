@@ -3,13 +3,15 @@
 
 
 
-body{background: linear-gradient(to top, #FFB75E, #169aff);
+body{
+    background: linear-gradient(to top, #ffafbd, #ffc3a0);
+    backround-image:;
     background-repeat: space;
 	margin:0;
 	width:100vw;
 	height:100vh;
 	overflow:hidden;
-	font-family: 'McLaren', cursive;
+	font-family: 'McLaren', ;
 }
 
 nav {
@@ -74,8 +76,12 @@ main div > img {
 }
 
 main h1 {
-	font-size:96px;
-	color:#003200;
+	
+	font-size:76px;
+	color:#000;
+}
+h1{
+	font-family:'Roboto', 'Helvetica', sans-serif;
 }
 
 main h2 {

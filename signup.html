@@ -12,10 +12,20 @@
 	<body>
 		
 		<nav>
-			
-			<a href='index'>Home</a>
-	        <a href='loginpage'>Login</a>
-
+	<a href='index'>Home</a>		
+					<!-- USERS WHO ARE NOT LOGGED WILL SEE THIS -->
+	{{#private}}
+	<a href='accountpage'>
+			<img src='{{avatar}}'>
+	</a>
+		<a onclick='logout()'>Logout</a>
+	{{/private}}
+	
+	<!-- USERS WHO ARE LOGGED WILL SEE THIS -->
+	{{^private}}
+	   	<a href='loginpage'>Login</a>
+		<a href='signup'>Signup</a>	
+	{{/private}}
 		</nav>
 		<main>
 		
@@ -37,8 +47,8 @@
 
 		</main>
 		<footer>
-			© 2023 The Doggo Inc
-		</foote>
+			© 2023 Kabelo
+		</footer>
 		
 		
 	</body>
